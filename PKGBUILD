@@ -9,8 +9,8 @@
 # Contributor: Dhina17 <dhinalogu@gmail.com>
 # Maintainer: Kordian Bruck <k@bruck.me>
 
-pkgname=android-studio
-pkgver=2023.2.1.25
+pkgname=android-studio-arctic-fox
+pkgver=2020.3.1.26
 pkgrel=1
 pkgdesc="The official Android IDE (Stable branch)"
 arch=('i686' 'x86_64')
@@ -25,7 +25,7 @@ options=('!strip')
 source=("https://dl.google.com/dl/android/studio/ide-zips/$pkgver/android-studio-$pkgver-linux.tar.gz"
         "$pkgname.desktop"
         "license.html")
-sha256sums=('cd63ead467dc92a08ff6b3695c01d57e802976fc64acddcd31cd6a2427ffa1bc'
+sha256sums=('344d858235ed5d3095ac25916a4a8f8730069f76e5a5fd0eba02522af88f541b'
             '73cd2dde1d0f99aaba5baad1e2b91c834edd5db3c817f6fb78868d102360d3c4'
             '9a7563f7fb88c9a83df6cee9731660dc73a039ab594747e9e774916275b2e23e')
 
@@ -38,8 +38,8 @@ package() {
 
   # Install the application
   install -d $pkgdir/{opt/$pkgname,usr/bin}
-  cp -a bin lib jbr plugins license LICENSE.txt build.txt product-info.json $pkgdir/opt/$pkgname
-  ln -s /opt/android-studio/bin/studio.sh $pkgdir/usr/bin/$pkgname
+  cp -a bin lib jre plugins license LICENSE.txt build.txt product-info.json $pkgdir/opt/$pkgname
+  ln -s /opt/$pkgname/bin/studio.sh $pkgdir/usr/bin/$pkgname
 
   # Copy licenses
   install -Dm644 LICENSE.txt "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.txt"

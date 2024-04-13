@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Android Studio
-Exec=android-studio %f
-Icon=android-studio
+Name=Android Studio (Arctic Fox)
+Exec=android-studio-arctic-fox %f
+Icon=android-studio-arctic-fox
 Comment=The official Android IDE
 Categories=Development;IDE;
 Terminal=false
